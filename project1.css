@@ -1,0 +1,451 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  background-color: #faede2;
+}
+
+.container{
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 25px;
+}
+
+/* haeder */
+.container.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-nav{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.logo{
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin-left: 30px;
+}
+
+li{
+  margin-right: 20px;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+label #btn,
+label #cancel{
+  color: black;
+  font-size: 30px;
+  float: right;
+  line-height: 40px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+label #cancel{
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top:10px ;
+  left: 15px;
+} 
+
+.login-signup{
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+}
+
+.login-button{
+  border: none;
+  margin-right: 15px;
+  background-color: #faede2;
+  font-size: 13px;
+  padding-bottom: 3px;
+}
+
+.signup-button{
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+/* showcase */
+.showcase.container{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.showcase-info{
+  padding-top: 250px;
+  flex-basis: 45%;
+}
+
+.showcase-info-heading{
+  font-size: 60px;
+  font-weight: 550;
+}
+
+.showcase-i-h-d{
+  background-color: black;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  margin-left: -15px;
+}
+
+.showcase-info-notes{
+  font-size: 16.2px;
+  font-weight: 400;
+  margin-right: 150px;
+  margin-top: 20px;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+.g-f-n{
+  position: relative;
+}
+
+.get-started-button{
+  display: inline-block;
+  background-color: #52784f;
+  color: white;
+  border-width: 0;
+  border-radius: 7px;
+  font-size: 12px;
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.fire-img{
+  display: inline-block;
+width: 30px;
+position: absolute;
+top: 10px;
+left: 150px;
+}
+
+.current-worth{
+  font-size: 12px;
+  position: absolute;
+  top: 17px;
+  left: 190px;
+}
+
+.showcase-img-section{
+  flex-basis: 70%;
+  position: relative;
+}
+
+.showcase-img-1{
+  max-width: 100%;
+  position: absolute;
+  top: 40px;
+  left: -30px; 
+}
+
+.showcase-img-note{
+  letter-spacing: 13px;
+  font-family: 'Lucida Sans';
+  font-size: 10px;
+  font-style: oblique;
+  position: absolute;
+  bottom: 17px;
+  right: 140px;
+}
+
+.smily-face{
+  width: 80px;
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+}
+
+/* tablet and under*/
+@media( max-width:820px){
+  .showcase.container{
+     flex-direction: column-reverse;
+  }
+
+  .showcase-info{
+    padding-top: 550px;
+    margin-bottom: 50px;
+  }
+
+  .showcase-info-heading{
+    margin-right: 150px;
+  }
+
+  .showcase-info-notes{
+    margin-right: 140px;
+    letter-spacing: 1.5px;
+  }
+
+  
+
+  .showcase-img-note{
+    letter-spacing:10px ;
+    font-size: 8px;
+    bottom: -500px;
+  }
+
+  .smily-face{
+    width: 70px;
+    bottom: -530px;
+  }
+
+}
+
+@media(max-width: 912px){
+  .showcase-img-1{
+    top: 120px;
+  }
+
+  .showcase-info-heading{
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  .showcase-img-note{
+    letter-spacing: 6px;
+  }
+
+}
+
+
+/* mobile */
+@media( max-width:535px){
+  label #btn{
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 22.5px;
+    left: 80px;
+  } 
+
+  ul{
+    display: list-item;
+    position: fixed;
+    width: 60%;
+    height: 100vh;
+    background-color: #34495e;
+    top: 0px;
+    left: -500px;
+    text-align: center;
+    transition: all .5s;
+    z-index: 50;
+    margin-left: -0px;
+  }
+
+  
+  .nav-bar ul{
+    display: block;
+  }
+
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    
+  }
+
+  nav ul li a{
+    font-size: large;
+  }
+
+  #check:checked ~ ul{
+    left:0;
+  }
+
+  #check:checked ~ label #btn{
+    display: none;
+  }  
+
+  #check:checked ~ label #cancel{
+    display: block;
+    transition: 1s;
+  } 
+  
+  .logo{
+    margin-top: 5px;
+  }
+
+  
+}
+
+@media(max-width:515px){
+  .showcase-img-note{
+    right: 100px;
+  }
+
+  @media(max-width:498px){
+    .showcase-img-note{
+      letter-spacing: 5px;
+      top: 380px;
+      }
+
+      .smily-face{
+        top: 345px;
+      }
+
+      .showcase-img-1{
+        top:120px;
+      }
+
+    .showcase-info-heading{
+      margin-right: 20px;
+      }
+
+    .showcase-info-notes{
+      margin-right:auto;
+      }
+
+      .showcase-info{
+        padding-top:410px;
+      }
+    }    
+
+  
+  @media(max-width:443px){
+    .showcase-img-note{
+      right: 70px;
+      letter-spacing: 3.5px;
+    }
+
+  }
+  }
+
+  @media(max-width:366px){
+    .showcase-info{
+      padding-top: 300px;
+    }
+
+    .showcase-info-heading{
+      margin-right: 0px;
+      font-size: 40px;
+    }
+
+    .showcase-info-notes{
+      letter-spacing: 1px;
+      margin-right: 20px;
+    }
+
+    .showcase-i-h-d{
+      width: 7px;
+      height: 7px;
+      margin-left: -10px;
+    }
+
+    .showcase-img-1{
+      top: 80px;
+    }
+
+    .showcase-img-note{
+      top:255px ;
+      right: 65px;
+      letter-spacing: 1.2px;
+    }
+
+    .smily-face{
+      width: 60px;
+      top: 228px;
+      right: 0px;
+    }
+
+  }
+
+  @media(max-width:290px){
+   .showcase-info-heading{
+     font-size: 35px;
+   }
+
+   .showcase-info-notes{
+     font-size: 12px;
+     margin-right: 11px;
+     line-height: 17px;
+   }
+
+   .get-started-button{
+     padding-right: 20px;
+     padding-left: 20px;
+   }
+
+   .fire-img{
+     left: 120px;
+   }
+
+   .current-worth{
+     left: 160px;
+   }
+
+   label #btn{
+     font-size: 23px;
+     margin-right: 2px;
+     line-height: 37px;
+   }
+
+   .showcase-img-note{
+     right: 53px;
+   }
+
+   .smily-face{
+     right: -10px;
+   }
+
+   .showcase-img-1{
+     left: 0px;
+   }
+
+   .login-button{
+     font-size: 13px;
+     margin-right: 5px;
+   }
+
+   .signup-button{
+     font-size: 12px;
+     margin-right: -15px;
+   }
+
+
+
+  }
+  
